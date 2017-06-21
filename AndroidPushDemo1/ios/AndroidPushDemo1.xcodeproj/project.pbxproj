@@ -37,6 +37,8 @@
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		562A99DDD8AA4A1AA968FC62 /* libRNPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 170425C8D0624D0A8AEE4617 /* libRNPush.a */; };
 		4246A55E32D049DC8752DED2 /* MobileCenter-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3126E9D5181D4AF6AC7B2449 /* MobileCenter-Config.plist */; };
+		CFBD980B96E84F90954AE90D /* libRNAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3F670E20BB459BBE5D173A /* libRNAnalytics.a */; };
+		58C848110D4B473CAB593B11 /* libRNCrashes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF9A57FF15C54D5A9E8A1C87 /* libRNCrashes.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -259,6 +261,10 @@
 		27B4C47A3E854C518D8EFF24 /* RNPush.xcodeproj */ = {isa = PBXFileReference; name = "RNPush.xcodeproj"; path = "../node_modules/mobile-center-push/ios/RNPush.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		170425C8D0624D0A8AEE4617 /* libRNPush.a */ = {isa = PBXFileReference; name = "libRNPush.a"; path = "libRNPush.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		3126E9D5181D4AF6AC7B2449 /* MobileCenter-Config.plist */ = {isa = PBXFileReference; name = "MobileCenter-Config.plist"; path = "AndroidPushDemo1/MobileCenter-Config.plist"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = text.plist.xml; explicitFileType = undefined; includeInIndex = 0; };
+		448B0DDA07784A1BAED55965 /* RNAnalytics.xcodeproj */ = {isa = PBXFileReference; name = "RNAnalytics.xcodeproj"; path = "../node_modules/mobile-center-analytics/ios/RNAnalytics.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		CB3F670E20BB459BBE5D173A /* libRNAnalytics.a */ = {isa = PBXFileReference; name = "libRNAnalytics.a"; path = "libRNAnalytics.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		338371BD3C164367B1415E1B /* RNCrashes.xcodeproj */ = {isa = PBXFileReference; name = "RNCrashes.xcodeproj"; path = "../node_modules/mobile-center-crashes/ios/RNCrashes.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		BF9A57FF15C54D5A9E8A1C87 /* libRNCrashes.a */ = {isa = PBXFileReference; name = "libRNCrashes.a"; path = "libRNCrashes.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +292,8 @@
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				562A99DDD8AA4A1AA968FC62 /* libRNPush.a in Frameworks */,
+				CFBD980B96E84F90954AE90D /* libRNAnalytics.a in Frameworks */,
+				58C848110D4B473CAB593B11 /* libRNCrashes.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +461,8 @@
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				27B4C47A3E854C518D8EFF24 /* RNPush.xcodeproj */,
+				448B0DDA07784A1BAED55965 /* RNAnalytics.xcodeproj */,
+				338371BD3C164367B1415E1B /* RNCrashes.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -983,10 +993,14 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\mobile-center-push\ios\RNPush",
+					"$(SRCROOT)\..\node_modules\mobile-center-analytics\ios\RNAnalytics",
+					"$(SRCROOT)\..\node_modules\mobile-center-crashes\ios\RNCrashes",
 				);
 			};
 			name = Debug;
@@ -1008,10 +1022,14 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\mobile-center-push\ios\RNPush",
+					"$(SRCROOT)\..\node_modules\mobile-center-analytics\ios\RNAnalytics",
+					"$(SRCROOT)\..\node_modules\mobile-center-crashes\ios\RNCrashes",
 				);
 			};
 			name = Release;
@@ -1034,6 +1052,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\mobile-center-push\ios\RNPush",
+					"$(SRCROOT)\..\node_modules\mobile-center-analytics\ios\RNAnalytics",
+					"$(SRCROOT)\..\node_modules\mobile-center-crashes\ios\RNCrashes",
 				);
 			};
 			name = Debug;
@@ -1055,6 +1075,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\mobile-center-push\ios\RNPush",
+					"$(SRCROOT)\..\node_modules\mobile-center-analytics\ios\RNAnalytics",
+					"$(SRCROOT)\..\node_modules\mobile-center-crashes\ios\RNCrashes",
 				);
 			};
 			name = Release;
@@ -1085,10 +1107,14 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\mobile-center-push\ios\RNPush",
+					"$(SRCROOT)\..\node_modules\mobile-center-analytics\ios\RNAnalytics",
+					"$(SRCROOT)\..\node_modules\mobile-center-crashes\ios\RNCrashes",
 				);
 			};
 			name = Debug;
@@ -1119,10 +1145,14 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\mobile-center-push\ios\RNPush",
+					"$(SRCROOT)\..\node_modules\mobile-center-analytics\ios\RNAnalytics",
+					"$(SRCROOT)\..\node_modules\mobile-center-crashes\ios\RNCrashes",
 				);
 			};
 			name = Release;
@@ -1148,6 +1178,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 			};
 			name = Debug;
@@ -1172,6 +1204,8 @@
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 			};

@@ -8,6 +8,10 @@
  */
 
 #import "AppDelegate.h"
+#import <RNCrashes/RNCrashes.h>
+
+#import <RNAnalytics/RNAnalytics.h>
+
 #import <RNPush/RNPush.h>
 
 
@@ -19,6 +23,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
   NSURL *jsCodeLocation;
+
+  [RNCrashes registerWithCrashDelegate: [[RNCrashesDelegateAlwaysSend alloc] init]];  // Initialize Mobile Center crashes
+
+  [RNAnalytics registerWithInitiallyEnabled:true];  // Initialize Mobile Center analytics
 
   [RNPush registerAndEnable];  // Initialize Mobile Center push
 
