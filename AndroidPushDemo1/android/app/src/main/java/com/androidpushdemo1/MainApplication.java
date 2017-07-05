@@ -3,6 +3,7 @@ package com.androidpushdemo1;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.microsoft.azure.mobile.react.mobilecenter.RNMobileCenterPackage;
 import com.microsoft.azure.mobile.react.crashes.RNCrashesPackage;
 import com.microsoft.azure.mobile.react.analytics.RNAnalyticsPackage;
 import com.microsoft.azure.mobile.react.push.RNPushPackage;
@@ -26,6 +27,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNMobileCenterPackage(MainApplication.this),
             new RNCrashesPackage(MainApplication.this, getResources().getString(R.string.mobileCenterCrashes_whenToSendCrashes)),
             new RNAnalyticsPackage(MainApplication.this, getResources().getString(R.string.mobileCenterAnalytics_whenToEnableAnalytics)),
             new RNPushPackage(MainApplication.this)

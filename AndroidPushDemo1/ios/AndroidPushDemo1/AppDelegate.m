@@ -8,6 +8,7 @@
  */
 
 #import "AppDelegate.h"
+#import <RNMobileCenter/RNMobileCenter.h>
 #import <RNCrashes/RNCrashes.h>
 
 #import <RNAnalytics/RNAnalytics.h>
@@ -23,6 +24,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
   NSURL *jsCodeLocation;
+
+  [RNMobileCenter register];  // Initialize Mobile Center 
+
+  [RNPush register];  // Initialize Mobile Center push
 
   [RNCrashes registerWithCrashDelegate: [[RNCrashesDelegateAlwaysSend alloc] init]];  // Initialize Mobile Center crashes
 

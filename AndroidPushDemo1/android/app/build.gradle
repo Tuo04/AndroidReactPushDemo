@@ -149,6 +149,7 @@ android {
 
 
 dependencies {
+    compile project(':mobile-center')
     compile project(':mobile-center-crashes')
     compile project(':mobile-center-analytics')
     compile project(':mobile-center-push')
@@ -157,7 +158,6 @@ dependencies {
     compile "com.facebook.react:react-native:+"  // From node_modules
     compile 'com.google.firebase:firebase-core:11.0.0'
     compile 'com.google.firebase:firebase-messaging:11.0.0'
-    compile("com.google.android.gms:play-services-gcm:9.0.0")
 }
 
 // Run this once to be able to run the application with BUCK
